@@ -34,7 +34,7 @@ header{
 
 /* Login */
 form {
-  padding-top: 50px;
+  padding-top: 40px;
   text-align: center;
 }
 
@@ -69,7 +69,7 @@ main {
 }
 
 .submit-btn {
-  padding: 10px 30px;
+  padding: 10px 30px ;
   cursor: pointer;
   display: block;
   margin: auto;
@@ -82,19 +82,19 @@ main {
   margin: 30px 10px 31px 0;
 }
 
-#register {
+#register { 
   left: 600px;
+  padding-top: 1px;
 }
 
 /*Rodapé*/
 footer{
-  padding: 5px;
-  display: flex;
-  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #0d9979;
   color: white;
-  font-size: 2rem;
   text-align: center;
-  background: #9cb872;
-  position: relative;
   width: 100%;
 }

@@ -1,0 +1,76 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `blog` DEFAULT CHARACTER SET utf8 ;
+USE `blog` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Utilizador`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `blog`.`Utilizador` (
+  `idUtilizador` INT NOT NULL,
+  `nome` VARCHAR(45) NULL,
+  `email` VARCHAR(45) NULL,
+  `senha` VARCHAR(45) NULL,
+  PRIMARY KEY (`idUtilizador`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Post`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `blog`.`Post` (
+  `idPost` INT NOT NULL,
+  `titulo` VARCHAR(45) NULL,
+  `Texto` VARCHAR(200) NULL,
+  `imagem` VARCHAR(200) NULL,
+  `dataCriacao` DATE NULL,
+  `Utilizador_idUtilizador` INT NOT NULL,
+  PRIMARY KEY (`idPost`, `Utilizador_idUtilizador`),
+  INDEX `fk_Post_Utilizador1_idx` (`Utilizador_idUtilizador` ASC) VISIBLE,
+  CONSTRAINT `fk_Post_Utilizador1`
+    FOREIGN KEY (`Utilizador_idUtilizador`)
+    REFERENCES `blog`.`Utilizador` (`idUtilizador`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Comentarios`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `blog`.`Comentarios` (
+  `idComentarios` INT NOT NULL,
+  `comentarios` VARCHAR(45) NULL,
+  `dataComentario` DATE NULL,
+  `Post_idPost` INT NOT NULL,
+  `Utilizador_idUtilizador` INT NOT NULL,
+  PRIMARY KEY (`idComentarios`, `Post_idPost`, `Utilizador_idUtilizador`),
+  INDEX `fk_Comentarios_Post_idx` (`Post_idPost` ASC) VISIBLE,
+  INDEX `fk_Comentarios_Utilizador1_idx` (`Utilizador_idUtilizador` ASC) VISIBLE,
+  CONSTRAINT `fk_Comentarios_Post`
+    FOREIGN KEY (`Post_idPost`)
+    REFERENCES `blog`.`Post` (`idPost`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Comentarios_Utilizador1`
+    FOREIGN KEY (`Utilizador_idUtilizador`)
+    REFERENCES `blog`.`Utilizador` (`idUtilizador`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
