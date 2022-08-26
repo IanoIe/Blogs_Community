@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="javascripts/login.js"></script>
+    <script src="javascripts/register.js"></script>
   </head>
 
   <body>
@@ -19,28 +21,25 @@
         <img src="images/Login.PNG" alt="loginImage" class="loginImage">
       </div>
 
-      <div class="container">
-        <input type="text" placeholder="Enter Email" name="email" required></b>
-        <input type="password" placeholder="Enter Password"  name="psw" required></b>
-        <button type="submit">Login</button>
-      </div>
-    </form>
+      <form id="login" class="input-group">
+        <input type="text" class="input-field" placeholder="Email" id="email" required></br>
+        <input type="password" class="input-field" placeholder="Senha" id="senha" required>
+        <button type="button" class="submit-btn" onclick="entrar()">Login</button>
+      </form>
 
-    <form id="register" class="input-group">
-      <label for="text"><b>Registo</b></label>
-      <input type="text" class="input-field" placeholder="Nome" id="nome" required>
-      <input type="text" class="input-field" placeholder="Email" id="emailRegistar" required>
-      <input type="text" class="input-field" placeholder="Senha" id="senha" required>
-      
-      <input type="checkbox" class="check-box"><span>Aceite Termos & Condições </span>
-      <button type="button" class="submit-btn" onclick="registar"></button>
-    </form>
+      <form id="register" class="input-group">
+        <label for="text">Registo</label></br>
+        <input type="text" class="input-field" placeholder="Nome" id="nome" required></br>
+        <input type="text" class="input-field" placeholder="Email" id="emailRegistar" required></br>
+        <input type="passwordRegist" class="input-field" placeholder="SenhaRegist" id="senhaRegist" required></br>
+        <input type="checkbox" class="check-box"><span>Aceite Termos & Condições </span>
+        <button type="button" class="submit-btn" onclick="registar()">Registar</button></br>
+      </form>
 
     <script>
       var y = document.getElementById("register");
       var z = docuemnt.getElementById("btn");
     </script>
-    
   </main>
 
 

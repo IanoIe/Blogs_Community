@@ -4,8 +4,8 @@ var util = require('util');
 /**Ligação a Base de Dados  */
 var pool = mysql.createPool({
     connectionLimit: 20,
-    host: 'remotemysql.com',
-    user: 'blog',
+    host: 'localhost',
+    user: 'root',
     password: 'Mamae13',
     database: 'blog'
 });
