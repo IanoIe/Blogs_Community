@@ -1,11 +1,11 @@
 /** Função de Login */
 function entrar() {
     $.ajax({
-        url: '/api/login',
+        url: '/api/login/login',
         method: 'post',
         data: {
             email: document.getElementById("email").value,
-            senha: document.getElementById("senha").value,
+            senha: document.getElementById("password").value,
         },
         success: function(result, status) {
             console.log(result)
