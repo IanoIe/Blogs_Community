@@ -1,12 +1,12 @@
 /**Criar registo */
-function register(){
+function registar(){
     $.ajax({
-        url: '/api/register',
+        url: '/api/registar/registar',
         method: 'post',
         data: {
             Nome:document.getElementById("nome").value,
             Email:document.getElementById("emailRegistar").value,
-            Senha:document.getElementById("senha").value,
+            Senha:document.getElementById("senhaRegist").value,
         },
         success: function(result, status){
             console.log('Success')

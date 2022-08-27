@@ -1,6 +1,6 @@
 var mysql = require('./connection').pool;
 
-module.exports.register = function(obj, callback, next){
+module.exports.registar = function(obj, callback, next){
     mysql.getConnection(function(err, conn){
         if(err) {
             conn.release();
