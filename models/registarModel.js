@@ -6,10 +6,10 @@ module.exports.registar = function(obj, callback, next){
             conn.release();
             next(err);
         }
-        else conn.query('INSERT INTO Utilizador(nome, email, senha) values(?,?,?)' [obj.nome, obj.email, obj.senha], function(err, rows){
+        else conn.query('INSERT INTO Utilizador(nome, email, senha) values(?,?,?)', [obj.Nome, obj.Email, obj.Senha], function(err, rows){
             conn.release();
             if(!(rows.length === 0)){
-                callback({code: 200, status: "Ok"}, rows)
+                callback({code: 200, status: 'Ok'},rows)
             }
             else {
                 callback({code: 401, status: "Faltam dados a preencher"}, null);

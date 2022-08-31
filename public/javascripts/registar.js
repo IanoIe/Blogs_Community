@@ -1,7 +1,7 @@
 /**Criar registo */
 function registar(){
     $.ajax({
-        url: '/api/registar/registar',
+        url: '/api/auth/registar',
         method: 'post',
         data: {
             Nome:document.getElementById("nome").value,
