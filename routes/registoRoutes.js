@@ -1,11 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var registarModel = require("../models/registarModel");
+var registoModel = require("../models/registoModel");
 
-
-/**Router de Registo */
-router.post('/registar', function(req, res, next){
-    registarModel.registar(req.body, function(status, result){
+/** Router de Registo */
+router.post('/register', function(req, res, next){
+    registoModel.registar(req.body, function(status, result) {
         if (status.code == 200)
         res.send(result);
         else {
@@ -14,6 +13,5 @@ router.post('/registar', function(req, res, next){
         }
     });
 });
-
 
 module.exports = router;

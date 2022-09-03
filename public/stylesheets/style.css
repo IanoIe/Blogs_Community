@@ -76,20 +76,13 @@ main {
   cursor: pointer;
   display: block;
   margin: auto;
-  border: 1;
   outline: none;
   border-radius: 30px;
+  background-color: blue;
 }
 
 .check-box {
   margin: 30px 10px 31px 0;
-}
-
-body.login span {
-  color: #777;
-  font-size: 12px;
-  bottom: 68px;
-  position: absolute;
 }
 
 #login{
@@ -107,7 +100,6 @@ footer{
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
   background-color: #0d9979;
   color: white;
   text-align: center;

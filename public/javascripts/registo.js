@@ -1,7 +1,7 @@
 /**Criar registo */
 function registar(){
     $.ajax({
-        url: '/api/auth/registar',
+        url: '/api/auth/register',
         method: 'post',
         data: {
             Nome:document.getElementById("nome").value,
@@ -10,10 +10,11 @@ function registar(){
         },
         success: function(result, status){
             console.log('Success')
+            alert('Registo com sucesso!')
             window.location = "index.html";
         },
-        error: function(jqXHR, textStatus, errorThrown){
-            console.log(errorThrown);
-        }
+        erro: function(jqXHR, textStatus, errorThrown) {
+            console.log(errorThron);
+        },
     })
 }
