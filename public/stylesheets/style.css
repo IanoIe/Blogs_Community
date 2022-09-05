@@ -1,31 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
-:root{
-  --green:#0d9979;
-}
-
-*{
-  font-family: 'Open Sans', sans-serif;
-  margin:0; padding:0;
-  box-sizing: border-box;
-  text-decoration: none;
-  transition: all .5s cubic-bezier(.37,1.14,.26,1.24);
-}
-
-/* Corpo */
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: url(../images/fundo.PNG) no-repeat;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Cabeçalho */
 header{
   display: flex;
   align-items: center;
@@ -39,63 +12,117 @@ header{
   width: 100%;
 }
 
-/* Login */
-form {
-  padding-top: 40px;
+body {
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/fundo.PNG) no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  max-height: 1px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.form-box{
+  width: 380px;
+  height: 480px;
+  position: relative;
+  margin: 6% auto;
+  background:	#ffff;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.button-box{
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #ff61241f;
+  border-radius: 30px;
+}
+
+.toggle-btn{
+  left: 10px;
+  padding: 10px 30px;
+  cursor: pointer;
+  background:transparent;
+  border:0;
+  outline: none;
+  position: relative;
+}
+
+#btn{
+  top:0;
+  left:0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right,#97d5e7,#69d372);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.nature-icon{
+  margin: 30px auto;
   text-align: center;
 }
 
-.container {
-  padding-top: 10px;
+.nature-icon img{
+  width: 30px;
+  margin: 0 12px;
+  box-shadow: 0 0 20px 0 #7f7f7f3d;
+  cursor: auto;
+  border-radius: 50%;
+  background: linear-gradient(to right,#97d5e7,#69d372);
 }
 
-main {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-/*Registo*/
-.input-group {
-  top: 400px;
+.input-group{
+  top: 180px;
   position: absolute;
-  width: 380px;
+  width: 280px;
+  transition: 0.5s;
 }
 
-.input-field {
-  height: 10px;
-  padding: 15px 15px;
-  margin: 5px 2.5px;
+.input-field{
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
   border-bottom: 1px solid #999;
   outline: none;
   background: transparent;
 }
 
-.submit-btn {
-  padding: 10px 30px ;
+.submit-btn{
+  widows: 85%;
+  padding: 10px 30px;
   cursor: pointer;
   display: block;
   margin: auto;
+  background: linear-gradient(to right,#97d5e7,#69d372);
+  border: 0;
   outline: none;
   border-radius: 30px;
-  background-color: blue;
 }
 
-.check-box {
+.check-box{
   margin: 30px 10px 31px 0;
 }
 
+body.login span{
+  color: #777;
+  font-size: 12px;
+  bottom: 68px;
+  position: absolute;
+}
 #login{
   left: 50px;
 }
 
-#register {
-  left: 570px;
-  padding-top: 100px;
+#register{
+  left: 450px;
 }
 
-
-/*Rodapé*/
 footer{
   position: fixed;
   left: 0;

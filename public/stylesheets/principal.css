@@ -1,9 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
-:root{
-  --green:#0d9979;
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f4f7f6;
+  box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+  position: fixed;
+  top:0; left:0;
+  z-index: 1000;
+  padding: 1rem 5rem;
+  width: 100%;
 }
-
 
 /*Rodapé*/
 footer{
