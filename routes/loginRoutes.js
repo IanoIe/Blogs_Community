@@ -14,4 +14,16 @@ router.post('/login', function(req, res, next){
     });
 });
 
+/**Router de Registar */
+router.post('/register', function(req, res, next){
+    registoModel.registar(req.body, function(status, result) {
+        if (status.code == 200)
+        res.send(result);
+        else {
+            res.statusMessage = status.status;
+            res.status(status.code).send({});
+        }
+    });
+});
+
 module.exports = router;
