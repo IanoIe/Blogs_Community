@@ -6,7 +6,7 @@ module.exports.login = function(obj, callback, next){
             conn.release();
             next(err);
         }
-        else conn.query("Select idUtilizador, nome, email, senha from Utilizador where email=? and senha=?", [obj.email, obj.senha], function(err, rows){
+        else conn.query("Select idUtilizador, nome, email, senha from Utilizador where email=? and senha=?", [obj.Email, obj.Senha], function(err, rows){
             conn.release();
             if (!(rows.length === 0)) {
                 callback({code: 200, status: "Ok"}, rows);
@@ -14,7 +14,7 @@ module.exports.login = function(obj, callback, next){
             else {
                 callback({code: 401, sattus: "Email ou Senha incorrecta"}, null);
             }
-        } )
+        })
     })
 }
 

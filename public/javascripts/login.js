@@ -14,8 +14,8 @@ function entrar() {
             localStorage.setItem("idUtilizador", result[0].idUtilizador);
             window.location = "Principal.html";
         },
-        erro: function(jqXHR, textStatus, errorThrown) {
-            console.log(errorThron);
+        error: function(jqXHR, textStatus, errorThron) {
+            console.log(errorThrown);
         },
     })
 }
