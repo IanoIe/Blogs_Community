@@ -6,7 +6,7 @@ module.exports.blogs = function(obj, callback, next){
             conn.release();
             next(err);
         }
-        else conn.query("Select idPost, titulo, Texto, imagem, dataCriacao, Utilizador_idUtilizador from Post where idPost=?", [obj.Email, obj.Senha], function(err, rows){
+        else conn.query("select * from Post inner join Utilizador on Utilizador_idUtilizador = idUtilizador left join Comentarios on idPost = Post_idPost = ?", [obj.Email, obj.Senha], function(err, rows){
             conn.release();
             if (!(rows.length === 0)) {
                 callback({code: 200, status: "Ok"}, rows);
