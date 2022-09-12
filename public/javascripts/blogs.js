@@ -1,5 +1,5 @@
 function blogs() {
-    url = '/api/imagenes/'
+    url = '/api/blogs/'
     idUtilizador = localStorage.getItem("idUtilizador")
     $.ajax({
         url: url,

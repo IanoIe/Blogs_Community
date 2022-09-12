@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var blogModel = require("../models/blogsModel");
-const { route } = require('./loginRoutes');
+
 
 
 router.post('/blogs', function(req, res, next){
