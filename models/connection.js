@@ -1,7 +1,7 @@
 var mysql = require('mysql');
 var util = require('util');
 
-/**
+
 var pool = mysql.createPool({
     connectionLimit: 20,
     host: 'remotemysql.com',
@@ -9,9 +9,9 @@ var pool = mysql.createPool({
     password: 'EgElDgolZ8',
     database: 'YkBUamiv97'
 });
- */
+ 
 
-/**Ligação a Base de Dados  */
+/** 
 var pool = mysql.createPool({
     connectionLimit: 20,
     host: 'localhost',
@@ -19,6 +19,7 @@ var pool = mysql.createPool({
     password: 'Mamae13',
     database: 'blog'
 });
+*/
 
 // Ping database to check for common exception errors.
 pool.getConnection((err, connection) => {
