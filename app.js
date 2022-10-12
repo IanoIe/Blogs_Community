@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/api/auth', loginRouter);
-app.use('/api/auth', blogsRouter);
+app.use('/api/blogs', blogsRouter);
 
 
 module.exports = app;

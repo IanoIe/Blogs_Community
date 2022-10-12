@@ -4,9 +4,9 @@ var blogModel = require("../models/blogsModel");
 
 
 
-router.post('/blogs', function(req, res, next){
+router.get('/', function(req, res, next){
     console.log(req.query)
-    blogModel.getBlogs(req.query, function(status, result){
+    blogModel.blogs(req.query, function(status, result){
         if (status.code == 200)
         res.send(result);
         else {
