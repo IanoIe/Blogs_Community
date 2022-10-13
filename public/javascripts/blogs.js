@@ -11,7 +11,7 @@ function blogs() {
                 const element = blogsInfor[index];
                 console.log(element)
                 blog += "<div><img src='"+element.imagem+"' class='iconDetails'/></div><div style='margin-left:0px;'><h3>"+"Titulo: "+
-                element.Titulo+"</h3><div style='font-size:1.6.6em'><h4>"+
+                element.titulo+"</h3><div style='font-size:1.6.6em'><h4>"+
                 "Texto: "+element.Texto+"</h4><h4>"+"Data de criação: "+element.dataCriacao.split("T").splice(0,1)+"</h4></div></br></br></div>"
             }
             console.log(blog)
