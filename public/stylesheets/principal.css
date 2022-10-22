@@ -12,6 +12,31 @@ header{
   width: 100%;
 }
 
+.container2{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+  border-radius: 10px;  
+  border: 5px #e9e7e7  solid;
+  padding-top: 10ch;
+  margin-left: 0px;
+  margin-right: 700px;
+}
+
+
+main{
+  display: block;
+  margin: 20px;
+  margin-top: 15px;
+  padding: 50px 30px 5px 0px;
+}
+
+
+div.img{
+  flex-direction: column;
+	display: inline-block;
+}
 
 /*Rodapé*/
 footer{

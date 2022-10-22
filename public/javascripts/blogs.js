@@ -10,10 +10,12 @@ function blogs() {
             for (let index = 0; index < blogsInfor.length; index++){
                 const element = blogsInfor[index];
                 console.log(element)
-                blog += "<div><img src='"+element.imagem+"' class='iconDetails'/></div><div style='margin-left:0px;'><h3>"+"Titulo: "+
-                element.titulo+"</h3><div style='font-size:1.6.6em'><h4>"+
-                "Texto: "+element.Texto+"</h4><h4>"+"Data de criação: "+element.dataCriacao.split("T").splice(0,1)+"</h4></div></br></br></div>"
+                blog += "<div class='post'><img src='"+element.imagem+"' class='iconDetails'/>"
+                +"<h3 class='title'>Titulo: "+
+                element.titulo+"<h4 class='subtitle'>Texto: "+
+                "Texto: "+element.Texto+"<h4 class='subtitle'>Data de criação: "+element.dataCriacao.split("T").splice(0,1)+"</h4></div>";
             }
+            "</div>"
             console.log(blog)
             document.getElementById("blogs").innerHTML = blog            
         }
