@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 header{
   display: flex;
@@ -12,6 +13,26 @@ header{
   width: 100%;
 }
 
+header .navbar ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+header .navbar ul li{
+  margin:0 1rem;
+}
+
+header .navbar ul li a{
+  font-size: 3rem;
+  color:#666;
+}
+
+header .navbar ul li a:hover{
+  color:var(--green);
+}
+
 .container2{
   display: grid;
   grid-template-columns: auto auto;
@@ -24,7 +45,6 @@ header{
   margin-right: 700px;
 }
 
-
 main{
   display: block;
   margin: 20px;
@@ -32,10 +52,17 @@ main{
   padding: 50px 30px 5px 0px;
 }
 
-
 div.img{
   flex-direction: column;
 	display: inline-block;
+}
+
+#map{
+  position: fixed;
+  margin-top: 50px;
+  right: 10px;
+  height: 70%;
+  width: 30%;
 }
 
 /*Rodapé*/
