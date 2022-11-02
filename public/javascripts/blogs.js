@@ -2,7 +2,7 @@ function blogs() {
     url = '/api/blogs/'
     idUtilizador = localStorage.getItem("idUtilizador")
     $.ajax({
-        url: url,
+        url: url+idUtilizador,
         method: 'get',
         success: function(resultado){
             blogsInfor = resultado
@@ -13,7 +13,7 @@ function blogs() {
                 blog += "<div class='post'><img src='"+element.imagem+"' class='iconDetails'/>"
                 +"<h3 class='title'>Titulo: "+
                 element.titulo+"<h4 class='subtitle'>Texto: "+
-                "Texto: "+element.Texto+"<h4 class='subtitle'>Data de criação: "+element.dataCriacao.split("T").splice(0,1)+"</h4></div>";
+                "Texto: "+element.texto+"<h4 class='subtitle'>Data de criação: "+element.dataCriacao.split("T").splice(0,1)+"</h4></div>";
             }
             "</div>"
             console.log(blog)
@@ -22,4 +22,4 @@ function blogs() {
     })
 }
 
-window.onload = ()=>{blogs()}
+window.onload = ()=>{console.log("Estou aqui...");blogs()}

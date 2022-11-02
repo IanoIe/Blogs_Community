@@ -4,9 +4,8 @@ var blogModel = require("../models/blogsModel");
 
 
 
-router.get('/', function(req, res, next){
-    console.log(req.query)
-    blogModel.blogs(req.query, function(status, result){
+router.get('/:id', function(req, res, next){
+    blogModel.blogs(req.params.id, function(status, result){
         if (status.code == 200)
         res.send(result);
         else {
