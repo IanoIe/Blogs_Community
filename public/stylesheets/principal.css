@@ -43,6 +43,7 @@ header .navbar ul li a:hover{
   padding-top: 10ch;
   margin-left: 0px;
   margin-right: 700px;
+  margin-top: 90px;
 }
 
 main{
@@ -52,6 +53,7 @@ main{
   padding: 50px 30px 5px 0px;
 }
 
+
 div.img{
   flex-direction: column;
 	display: inline-block;
@@ -59,11 +61,23 @@ div.img{
 
 #map{
   position: fixed;
-  margin-top: 50px;
   right: 10px;
   height: 70%;
   width: 30%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Rodapé*/
 footer{
