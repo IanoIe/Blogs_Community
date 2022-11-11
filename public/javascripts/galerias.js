@@ -1,4 +1,4 @@
-function blogs() {
+function galerias() {
     url = '/api/galerias/';
     idUtilizador = localStorage.getItem("idUtilizador");
     $.ajax({
@@ -6,7 +6,7 @@ function blogs() {
         method: 'get',
         success: function(resultado){
             galeriasInfor = resultado;
-            var galeria = "<div class='container2'>";
+            var galeria = "<div class='container1'>";
             console.log(galeriasInfor)
             for (let index = 0; index < galeriasInfor.length; index++){
                 const element = galeriasInfor[index];

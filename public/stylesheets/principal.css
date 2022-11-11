@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
+/*Cabeçalho*/
 header{
   display: flex;
   align-items: center;
@@ -33,48 +34,34 @@ header .navbar ul li a:hover{
   color:var(--green);
 }
 
-.container2{
+
+/*Corpo*/
+
+.grid-container{
   display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 10px;
+  grid-template-areas: 'main right right';
+  gap: 10px;
+  background-color: rgb(255, 255, 255);
   padding: 10px;
-  border-radius: 10px;  
-  border: 5px #e9e7e7  solid;
-  padding-top: 10ch;
-  margin-left: 0px;
-  margin-right: 700px;
-  margin-top: 90px;
+  
 }
 
-main{
-  display: block;
-  margin: 20px;
-  margin-top: 15px;
-  padding: 50px 30px 5px 0px;
+.grid-container > div{
+  background-color: #1af4ab;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  margin-top: 125px;
 }
 
-
-div.img{
-  flex-direction: column;
-	display: inline-block;
-}
-
+ 
 #map{
+  
   position: fixed;
-  right: 10px;
+  right: 20px;
   height: 70%;
-  width: 30%;
+  width: 40%;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
