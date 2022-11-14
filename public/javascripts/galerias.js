@@ -11,8 +11,9 @@ function galerias() {
             for (let index = 0; index < galeriasInfor.length; index++){
                 const element = galeriasInfor[index];
                 console.log(element)
-                galeria += "<div class='galeria'><img src='"+element.descricao+"' class='iconDetails'/>"
-                +"<h4 class='subtitle'>Data de criação: "+element.dataCriacaoGaleria.split("T").splice(0,1)+"</h4></div>";
+                galeria += "<div class='galeria'><img src='"+element.capa_imagem+"' class='iconDetails'/>" +
+                "<h3 class='title'>Titulo: "+element.descricao+"<h4 class='subtitle'>Data de criação: "
+                +element.dataCriacaoGaleria.split("T").splice(0,1)+"</h4></div>";
             }
             console.log(galeria)
             document.getElementById("galerias").innerHTML = galeria;          
