@@ -85,16 +85,10 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Blogs_Community`.`Galeria` (
   `idGaleria` INT NOT NULL AUTO_INCREMENT,
-  `descricao` VARCHAR(200) NULL,
+  `descricao` VARCHAR(250) NULL,
   `dataCriacaoGaleria` TIMESTAMP(6) NULL,
-  `Capa_idCapa` INT NOT NULL,
-  PRIMARY KEY (`idGaleria`, `Capa_idCapa`),
-  INDEX `fk_Galeria_Capa1_idx` (`Capa_idCapa` ASC) VISIBLE,
-  CONSTRAINT `fk_Galeria_Capa1`
-    FOREIGN KEY (`Capa_idCapa`)
-    REFERENCES `Blogs_Community`.`Capa` (`idCapa`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  `capa` VARCHAR(200) NULL,
+  PRIMARY KEY (`idGaleria`))
 ENGINE = InnoDB;
 
 

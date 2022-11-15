@@ -6,7 +6,7 @@ module.exports.galerias = function(obj, callback, next){
             conn.release();
             next(err);
         }
-        else conn.query("select capa_imagem, descricao, dataCriacaoGaleria from Capa, Galeria where idGaleria = ?", obj, function(err, rows){
+        else conn.query("select descricao, dataCriacaoGaleria, capa from galeria", obj, function(err, rows){
             conn.release();
             if (!(rows.length === 0)) {
                 callback({code: 200, status: "Ok"}, rows);

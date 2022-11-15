@@ -1,6 +1,6 @@
 function galerias() {
-    url = '/api/galerias/';
-    idUtilizador = localStorage.getItem("idUtilizador");
+    url = '/api/galerias/'
+    idUtilizador = localStorage.getItem("idUtilizador")
     $.ajax({
         url: url+idUtilizador,
         method: 'get',
@@ -11,10 +11,11 @@ function galerias() {
             for (let index = 0; index < galeriasInfor.length; index++){
                 const element = galeriasInfor[index];
                 console.log(element)
-                galeria += "<div class='galeria'><img src='"+element.capa_imagem+"' class='iconDetails'/>" +
+                galeria += "<div class='galeria'><img src='"+element.capa+"' class='iconDetails'/>" +
                 "<h3 class='title'>Titulo: "+element.descricao+"<h4 class='subtitle'>Data de criação: "
                 +element.dataCriacaoGaleria.split("T").splice(0,1)+"</h4></div>";
             }
+            "</div>";
             console.log(galeria)
             document.getElementById("galerias").innerHTML = galeria;          
         }

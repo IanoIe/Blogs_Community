@@ -1,14 +1,19 @@
 var express = require('express');
 var router = express.Router();
-
-var galeriasModel = require("../models/galeriasModel")
+var galeriasModel = require("../models/galeriasModel");
 
 
 /*Get all galerias */
-router.get('/', async function(req, res, next){
-    let result = await galeriasModel.getAllGalerias();
-    res.status(result.status).send(result.data);
-});
-
+router.get('/:id', function(req, res, next){
+    galeriasModel.galerias(req.params.id, function(status, result){
+        if (status.code == 200)
+        res.send(result);
+        else{
+            res.statusMessage = status.status;
+            res.status(status.code).send(result)
+        }
+    });
+})
+    
 
 module.exports = router;

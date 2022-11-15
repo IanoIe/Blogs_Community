@@ -15,10 +15,5 @@ router.get('/:id', function(req, res, next){
     });
 })
 
-router.get('/', async function(req, res, next){
-    let result = await galeriasModel.getAllGalerias();
-    res.status(result.status).send(result.data);
-});
-
 
 module.exports = router;
