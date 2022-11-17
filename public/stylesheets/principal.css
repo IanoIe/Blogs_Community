@@ -38,12 +38,10 @@ header .navbar ul li a:hover{
 /*Corpo*/
 
 .grid-container{
-  display: grid;
-  grid-template-areas: 'main right right';
-  gap: 10px;
-  background-color: rgb(255, 255, 255);
-  padding: 10px;
-  
+  width: 100%;
+  height: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .grid-container > div{
@@ -55,19 +53,24 @@ header .navbar ul li a:hover{
   margin-top: 125px;
 }
 
+.galeria{
+  width: 500px;
+  display: inline-block;
 
-.grid-item-blogs{
-  grid-area: 2 / 1 / span 2 / span 2;
+}
+
+ .galeria > img{
+  width: 30%;
+  height: 30%;
+  
+ }
+ 
+ .galeria > h3 {
+  font-size: 0.6rem;
  }
 
- .grid-item-galerias{
-  width: 740px;
-  height: 500px;
- }
-
- .grid-item-pesquisas{
-  width: 740px;
-  height: 500px;
+ .galeria > h4{
+  font-size: 0.5rem;
  }
 
 
