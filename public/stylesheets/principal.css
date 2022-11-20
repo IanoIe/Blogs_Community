@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
+body {
+  background: linear-gradient(rgba(217, 209, 209, 0.4),rgba(0,0,0,0.4)), url(../images/rochas.jpg) no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  max-height: 1px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 /*Cabeçalho*/
 header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f4f7f6;
+  background-color: #f1f6f4;
   box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
   position: fixed;
   top:0; left:0;
@@ -14,39 +23,19 @@ header{
   width: 100%;
 }
 
-header .navbar ul{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-}
-
-header .navbar ul li{
-  margin:0 1rem;
-}
-
-header .navbar ul li a{
-  font-size: 3rem;
-  color:#666;
-}
-
-header .navbar ul li a:hover{
-  color:var(--green);
-}
-
 
 /*Corpo*/
-
 .grid-container{
+  background: url(../images/Welcome.png) no-repeat;
   width: 100%;
   height: 100%;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 1px;
+  margin-right: 1px;
 }
 
 .grid-container > div{
   border: 1px solid black;
-  background-color: #1af4ab;
+  background-color: #bbe0d4;
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
@@ -59,23 +48,7 @@ header .navbar ul li a:hover{
 
 }
 
- .galeria > img{
-  width: 30%;
-  height: 30%;
-  
- }
- 
- .galeria > h3 {
-  font-size: 0.6rem;
- }
-
- .galeria > h4{
-  font-size: 0.5rem;
- }
-
-
-#map{
-  
+#map{  
   position: fixed;
   right: 20px;
   height: 70%;
