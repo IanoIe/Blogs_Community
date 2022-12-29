@@ -6,7 +6,7 @@ function blogs() {
         method: 'get',
         success: function(resultado){
             blogsInfor = resultado;
-            var blog = "<div class='container2'>";
+            var blog = "<div class='container1'>";
             console.log(blogsInfor)
             for (let index = 0; index < blogsInfor.length; index++){
                 const element = blogsInfor[index];
