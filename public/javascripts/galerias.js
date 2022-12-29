@@ -13,7 +13,7 @@ function galerias() {
                 console.log(element)
                 galeria += "<div class='galeria'><img src='"+element.capa+"' class='iconDetails'/>" +
                 "<h3 class='title'>Titulo: "+element.descricao+"<h4 class='subtitle'>Data de criação: "
-                +element.dataCriacaoGaleria.split("T").splice(0,1)+"</img></h3></h4></div>";
+                +element.dataCriacaoGaleria.split("T").splice(0,1)+"</h3></br></h4></br></div>";
             }
             "</div>";
             console.log(galeria)

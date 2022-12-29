@@ -18,11 +18,23 @@ header{
 .flex-galerias {
   padding-top: 150px;
 
-  width: 100px;
-  height: 100px;
-  display: inline-block;
 }
 
+
+#container{
+  position: relative;
+  margin-top: 200px;
+  padding: 0;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border: 3px solid black;
+}
+
+#container img{
+  width: 300px;
+  height: 250px;
+}
 /*Rodapé*/
 footer{
   position: fixed;
@@ -32,5 +44,4 @@ footer{
   background-color: #0d9979;
   color: white;
   text-align: center;
-  width: 100%;
 }
