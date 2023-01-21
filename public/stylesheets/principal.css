@@ -24,10 +24,11 @@ header{
   padding-top: 150px;
 }
 
-#galerias{
-
-  display: flex;
+.galeria{
+  flex-flow: column wrap;
+  
 }
+
 
 /*Rodapé*/
 footer{
