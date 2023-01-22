@@ -14,28 +14,34 @@ header{
   width: 100%;
 }
 
-.container1 {
+.log-out{
+  width: 400px;
+}
+
+.log-out > img {
+  max-width: 25px;
+  max-height: 5px;
+  width: auto;
+  height: auto;
+}
+.container {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   flex-wrap: wrap;
-  width: 50px;
+  width: 100%;
 }
 .galeria{
+  flex: 33.33%;
   margin-top: 170px;
-  width: 70%;
-  height: 50%; 
-  justify-content: space-between;
 }
 /*Tamanho de imagens */
 .galeria > img{
   display: inline;
   border: 2px;
   margin: 4px;
-  width: 50%;
-  height: 25%;
+  width: 90%;
+  height: 50%;
 }
-
-
 
 /*Rodapé*/
 footer{
