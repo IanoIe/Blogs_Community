@@ -20,16 +20,17 @@ header{
   flex-wrap: wrap;
   width: 50px;
 }
-
 .galeria{
   margin-top: 170px;
   width: 70%;
   height: 50%; 
   justify-content: space-between;
 }
-
 /*Tamanho de imagens */
 .galeria > img{
+  display: inline;
+  border: 2px;
+  margin: 4px;
   width: 50%;
   height: 25%;
 }
