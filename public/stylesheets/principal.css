@@ -32,7 +32,7 @@ header{
 }
 .galeria{
   flex: 33.33%;
-  margin-top: 170px;
+  margin-top: 120px;
 }
 /*Tamanho de imagens */
 .galeria > img{
