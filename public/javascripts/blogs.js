@@ -1,4 +1,4 @@
-function blogs() {
+function BLOGS() {
     url = '/api/blogs/'
     idUtilizador = localStorage.getItem("idUtilizador")
     $.ajax({
@@ -23,4 +23,5 @@ function blogs() {
     })
 }
 
-window.onload = ()=>{console.log("Estou aqui...");blogs()}
+window.onload = ()=>{
+    blogs()}

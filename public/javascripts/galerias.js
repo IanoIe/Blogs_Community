@@ -22,4 +22,6 @@ function galerias() {
     })
 }
 
-window.onload = ()=>{console.log("Estou aqui...");galerias()}
+window.onload = ()=>{
+    galerias()
+}
