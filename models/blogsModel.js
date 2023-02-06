@@ -1,4 +1,4 @@
-var mysql = require('../../models/connection').pool;
+var mysql = require('./connection').pool;
 
 module.exports.blogs = function(id, callback, next){
     mysql.getConnection(function (err, conn){
