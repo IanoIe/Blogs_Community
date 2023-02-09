@@ -14,7 +14,7 @@ function BLOGS() {
                 blog += "<div class='post'><img src='"+element.urlImagem+"' class='iconDetails'/>"
                 +"<h3 class='title'>Titulo: "+
                 element.titulo+"<h4 class='subtitle'>Texto: "+element.texto+
-                "<h4 class='subtitle'>Data de criação: "+element.dataCriacaoPost.split("T").splice(0,1)+"</h4></div>";
+                "<h4 class='subtitle'>Data de criação: "+element.dataCriacaoPost.split("T").splice(0,1)+"</h3></br></h4></br></div>";
             }
             "</div>";
             console.log(blog)
