@@ -24,4 +24,5 @@ function BLOGS() {
 }
 
 window.onload = ()=>{
-    BLOGS()}
+    BLOGS()
+}
