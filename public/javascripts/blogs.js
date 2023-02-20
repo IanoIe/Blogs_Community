@@ -18,7 +18,7 @@ function BLOGS() {
             }
             "</div>";
             console.log(blog)
-            document.getElementById("blogs").innerHTML = blog;           
+            document.getElementById("blogs").innerHTML = blog;          
         }
     })
 }
@@ -26,3 +26,4 @@ function BLOGS() {
 window.onload = ()=>{
     BLOGS()
 }
+
